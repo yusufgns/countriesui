@@ -10,9 +10,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview" 
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "countriesui": "^0.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -21,15 +23,19 @@
     "react-dom": "^18.2.0"
   },
   "files": [
-    "dist"
+    "/dist"
   ],
-  "main": "./dist/countries-ui.umd.js",
-  "module": "./dist/countries-ui.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/countriesui.umd.js",
+  "module": "./dist/countriesui.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/countries-ui.js",
-      "require": "./dist/countries-ui.umd.js"
+      "import": "./dist/countriesui.es.js",
+      "require": "./dist/countriesui.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "devDependencies": {
@@ -39,10 +45,13 @@
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "json": "^11.0.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vite-plugin-dts": "^3.7.3"
