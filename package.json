@@ -1,6 +1,6 @@
 {
   "name": "countriesui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The version of libphonenumber-js library with shadcn UI support.",
   "type": "module",
   "repository": {
